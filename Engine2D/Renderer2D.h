@@ -44,11 +44,10 @@ public:
 			return;
 		}
 	}
+	~Renderer2D();
 
 	void Render();
 	static SDL_Texture* CreateTextureFromImage(SDL_Renderer* Renderer, const char* imagepath);
-
-	~Renderer2D();
 
 };
 

@@ -4,23 +4,33 @@
 class Vector2D
 {
 private:
-
+    
+    float x, y;
 public:
 
-	float x, y;
+    Vector2D(float x, float y) : x(x), y(y) {}
+    float getX() { return x; }
+    float getY() { return y; }
+    void setX(float newX) { x = newX; }
+    void setY(float newY) { y = newY; }
+    float length();
 
-	Vector2D(float _x = 0.0f, float _y = 0.0f) : x(_x), y(_y) {}
+    void normalize();
 
-	Vector2D operator+(const Vector2D& SecondVec) const { return Vector2D(this->x + SecondVec.x, this->y + SecondVec.y); }
-	Vector2D operator-(const Vector2D& SecondVec) const { return Vector2D(this->x - SecondVec.x, this->y - SecondVec.y); }
-	Vector2D operator*(const Vector2D& SecondVec) const { return Vector2D(this->x * SecondVec.x, this->y * SecondVec.y); }
-	Vector2D operator/(const Vector2D& SecondVec) const { return Vector2D(this->x / SecondVec.x, this->y / SecondVec.y); }
+    ///----------------------------------------------Operators overloading ------------------------------------------------------------
+    /// + and += operators
+    Vector2D operator+(const Vector2D& v2) const;
+    Vector2D& operator+=(const Vector2D& v2);
 
-	bool operator==(const Vector2D& SecondVec) const { return this->x == SecondVec.x && this->y == SecondVec.y; }
+    /// * and *= operator
+    Vector2D operator*(float scalar);
+    Vector2D& operator*=(float scalar);
 
-	
-	float Distance(const Vector2D& SecondVec) const { return sqrt(pow(this->x - SecondVec.x, 2) + pow(this->y - SecondVec.y, 2)); }
-
-
+    /// - and -= operator
+    Vector2D operator-(const Vector2D& v2) const;
+    Vector2D& operator-=(const Vector2D& v2);
+    /// / and /= operator
+    Vector2D operator/(float scalar);
+    Vector2D& operator/=(float scalar);
 };
 

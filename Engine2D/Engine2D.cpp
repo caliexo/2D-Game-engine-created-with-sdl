@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 {
     Renderer2D* Renderer = new Renderer2D{1920, 1080 };
 	Timer time;
-	Entity* Champ = new Entity{ Renderer->Renderer, "bbb.jpg", 500, 500 };
+	Entity* Champ = new Entity{ Renderer->Renderer, "bbb.jpg", 500, 500, 247, 300 };
 
     bool quit = false;
     SDL_Event event;
@@ -36,6 +36,8 @@ int main(int argc, char* argv[])
 		SDL_RenderPresent(Renderer->Renderer);
 		time.FinishSession();
 	}
+
+	delete Champ;
 
     return 0;
 }

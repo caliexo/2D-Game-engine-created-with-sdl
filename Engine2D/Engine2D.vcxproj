@@ -134,12 +134,16 @@
   <ItemGroup>
     <ClCompile Include="Engine2D.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityManger.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Renderer2D.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityManger.h" />
+    <ClInclude Include="InputHandler.h" />
     <ClInclude Include="Renderer2D.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Vector2D.h" />
